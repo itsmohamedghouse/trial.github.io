@@ -43,11 +43,30 @@
   text-decoration: none;
   cursor: pointer;
 }
-p {
+.timer {
   text-align: center;
-  font-size: 60px;
+  font-size: 70px;
   margin-top: 0px;
 }
+
+
+.progress {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    border: none;
+    border-radius: 290486px;
+    display: block;
+    height: 1rem;
+    overflow: hidden;
+    padding: 0;
+    width: 100%;
+}
+ p {
+ 	text-align: center;
+  font-size: 50px;
+  margin-top: 0px;
+ }
+
 </style>
 </head>
 <body>
@@ -111,9 +130,23 @@ p {
   </div>
 
 </div>
+<div class="container">
 <p style="padding-top: 8%">Time left for iftaar</p>
-<p id="demo"></p>
+<p id="demo" class="timer"></p>
 
+<div class="progress-wrapper" style="margin-bottom: 20px; margin-top: 20px;">
+      <progress id="timeprogress" class="progress is-custom" value="0" max="100">0</progress>
+      <p class="progress-value">0%</p>
+
+    </div>
+   </div>
+
+
+
+
+
+
+   
 <script>
 	// Get the modal
 var modal = document.getElementById("myModal");
